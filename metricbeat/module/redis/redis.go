@@ -33,7 +33,7 @@ func ParseRedisInfo(info string) map[string]string {
 
 // ParseRedisLine parses a single line returned by INFO
 func ParseRedisLine(s string, delimeter string) []string {
-	return strings.Split(s, delimeter)
+	return strings.SplitN(s, delimeter, 2)
 }
 
 // FetchRedisInfo returns a map of requested stats.

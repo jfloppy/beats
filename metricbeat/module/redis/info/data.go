@@ -142,6 +142,14 @@ var (
 			"latest_fork_usec":       c.Int("latest_fork_usec"),
 			"migrate_cached_sockets": c.Int("migrate_cached_sockets"),
 		},
+		"sentinel": s.Object {
+			"masters": c.Bool("sentinel_masters"),
+			"tilt": c.Bool("sentinel_tilt"),
+			"running_scripts": c.Bool("sentinel_running_scripts"),
+			"scripts_queue_length" : c.Int("sentinel_scripts_queue_length"),
+			"simulate_failure_flags": c.Bool("sentinel_simulate_failure_flags"),
+			"master0": c.Str("master0"),
+		},
 	}
 )
 
